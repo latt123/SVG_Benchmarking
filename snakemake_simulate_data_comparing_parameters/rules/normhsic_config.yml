@@ -1,0 +1,8 @@
+truncation : [1, 2, 4, 8] # for both truncation X and truncation e
+kernel_X : ['gaussian']
+kernel_Y : ['gaussian']
+q_X : [0.01, 0.1, 0.5]
+q_Y : [0.25, 0.5, 0.75]
+proportion_train : [0.3]
+
+
