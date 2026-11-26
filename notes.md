@@ -35,7 +35,8 @@ We made the following modifications to run `normhsic` method in both the `snakem
 ## Running `normhsic` varying hyperparameters
 To investigate the impact of hyperparameters on the performance of `normhsic` on the `snakemake_simulate_data` section of the benchmark we implement a further snakemake pipeline in `snakemake_simulate_data_comparing_parameters` folder. This requires an additional `normhsic_config.yml` file allowing the method to run several times over the different parameters.  
 
-## 
+## Evaluating Simulate Data
+
 
 
 ## .gitignore

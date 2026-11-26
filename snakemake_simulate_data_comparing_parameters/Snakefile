@@ -3,8 +3,8 @@ from snakemake.utils import min_version
 ##### set minimum snakemake version #####
 min_version("6.4.1")
 
-include: "rules/knit.smk"
-configfile: "snakemake_simulate_data_comparing_parameters/rules/knit_config.yml"
+include: "rules/normhsic.smk"
+configfile: "snakemake_simulate_data_comparing_parameters/rules/normhsic_config.yml"
 
 
 dataset_list = ['28_DBiT_seq_E10_whole',
@@ -15,15 +15,9 @@ dataset_list = ['28_DBiT_seq_E10_whole',
                 '40_slide_tag_mouse_embryo',
                 '33_10x_Xenium_Mouse_Brain'
                 ] 
-method_list = ['knit']
+method_list = ['normhsic']
 rule all:
     input:
         expand("results/02b_snakemake_simulate_data_comparing_parameters/output/knit/{dataset}_trunc_{truncation}_kX_{kernel_X}_kY_{kernel_Y}_qX_{q_X}_qY_{q_Y}_proptrain_{proportion_train}.csv", method=method_list, dataset=dataset_list, truncation = config["truncation"], kernel_X = config["kernel_X"], kernel_Y = config["kernel_Y"], q_X = config["q_X"], q_Y = config["q_Y"], proportion_train = config["proportion_train"])
 
-## On mine and francks computer
 # uv run snakemake --snakefile snakemake_simulate_data_comparing_parameters/Snakefile --keep-going --nolock --use-conda --cores all --rerun-triggers mtime --conda-base-path $HOME/miniforge3
-
-## Onn ghislains computer 
-# uv run snakemake --snakefile snakemake_simulate_data_comparing_parameters/Snakefile --keep-going --nolock --use-conda --cores all --rerun-triggers mtime 
-# /home/lucy/Documents/SVG_Benchmarking/02b_snakemake_simulate_data_comparing_parameters/methods/run_knit.py
-# /home/lucy/Documents/SVG_Benchmarking/snakemake_simulate_data_comparing_parameters/methods/run_knit.py
