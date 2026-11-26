@@ -4,6 +4,15 @@ data/simulation/10X/.ipynb_checkpoints/
 benchmarking/utils/.vscode
 */.ipynb_checkpoints/
 */.vscode
-*.h5ad
+
+## So don't track results files 
+results/
 *.csv
-*.txt
+*.h5ad
+*.pdf
+\.snakemake/
+*.sh
+.RData
+.Rhistory
+.Rproj.user
+*.h5
