@@ -5,3 +5,5 @@ benchmarking/utils/.vscode
 */.ipynb_checkpoints/
 */.vscode
 *.h5ad
+*.csv
+*.txt
