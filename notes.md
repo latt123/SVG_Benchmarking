@@ -6,7 +6,7 @@ Install from GitHub:
 $ pip install git+https://github.com/latt123/knit
 ```
 
-## Datasets
+## Datasets
 We did not generate the simulated datasets but imported those used in the original benchmark from [here](https://zenodo.org/records/18193366). 
 
 ## Results
@@ -24,9 +24,11 @@ conda env create -f SPARKX_env.yml -n SPARKX_env
 ```
 Environment requirements are in `config` folder.
 
-
-## Adding `normhsic` to snakemake pipeline
-
+## Modifications to run `normhsic` using snakemake pipeline
+1. In `methods/` add `run_normhsic.py`, a python script to run `normhsic` method. Adding parsers for arguments following template for other methods.
+2. In `rules` add `normhsic.smk` file specifying input, output and benchmark paths, conda environment for `knit_env` and shell comand to run `run_normhsic.py` python script.
+3. Edit `Snakefile`. Include the `normhsic.smk` file and edit the `method_list` to only run for `normhsic`. Edit the results path in rule. 
 
 ## .gitignore
 We modify the .gitignore file to not track results files (h5ad, csv, txt).
+
