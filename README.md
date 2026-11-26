@@ -1,3 +1,17 @@
+This repository is cloned from [SVG_Benchmarking](https://github.com/pinellolab/SVG_Benchmarking/tree/main).
+
+We run the benchmark for normHSIC independence test as a method to identify spatially variable genes. This is implemented using `knit` package. 
+Install from GitHub:
+```console
+$ pip install git+https://github.com/latt123/knit
+```
+
+For detail on modifications made in order to run normHSIC method see [notes](noted.md).
+
+Figures for "A Normalised Kernel Test for Independence" are created in [plots](plots.ipynb).
+
+
+
 # Benchmarking methods for identification of spatially variable genes
 
 This repository contains comprehensive scripts and notebooks for benchmarking computational methods that identify spatially variable genes (SVGs) and peaks in spatial transcriptomics and spatial ATAC-seq data. The project provides a systematic evaluation framework across multiple spatial genomics technologies and datasets.
