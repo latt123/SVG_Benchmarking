@@ -1,7 +1,6 @@
 library(SPARK)
 library(optparse)
-
-source("/data/pinello/PROJECTS/2023_03_SVGBenchmarking/scripts/utils/helper.R")
+library(anndataR)
 
 option_list = list(
     make_option(c("-i", "--input"), type="character", default=NULL, 
