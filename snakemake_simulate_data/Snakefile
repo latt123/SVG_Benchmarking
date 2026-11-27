@@ -83,4 +83,4 @@ rule all:
         expand("results/02_snakemake_simulate_data/output/{method}/{dataset}.csv", method=method_list, dataset=dataset_list)
 
 
-# run snakemake --snakefile snakemake_simulate_data/Snakefile --keep-going --nolock --use-conda --cores all --rerun-triggers mtime --conda-base-path $HOME/miniforge3
+# uv run snakemake --snakefile snakemake_simulate_data/Snakefile --keep-going --nolock --use-conda --cores all --rerun-triggers mtime --conda-base-path $HOME/miniforge3

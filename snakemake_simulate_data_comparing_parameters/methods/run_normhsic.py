@@ -5,7 +5,7 @@ from knit.run_test import run_test
 import argparse
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Run knit with command line")
+    parser = argparse.ArgumentParser(description="Run normhsic with command line")
     parser.add_argument(
         "-i",
         "--input",
@@ -86,7 +86,6 @@ def main():
     gene_list = adata.var['gene'].values
     values_df = []
     ## Run test on each gene
-    # for i in range(5):
     for i in range(Y_all_genes.shape[1]):
         pval, test_stat = run_test(X,Y_all_genes[:,i],  kernel_X = kernel_X, kernel_Y = kernel_Y, 
         quantiles_bandwidth_X = [q_X], quantiles_bandwidth_Y = [q_Y], 

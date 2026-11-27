@@ -6,7 +6,7 @@ Install from GitHub:
 $ pip install git+https://github.com/latt123/knit
 ```
 
-For detail on modifications made in order to run normHSIC method see [notes](noted.md).
+For details on the modifications made in order to run normHSIC method on this benchmark see [notes](noted.md).
 
 Figures for "A Normalised Kernel Test for Independence" are created in [plots](plots.ipynb).
 

@@ -18,6 +18,6 @@ dataset_list = ['28_DBiT_seq_E10_whole',
 method_list = ['normhsic']
 rule all:
     input:
-        expand("results/02b_snakemake_simulate_data_comparing_parameters/output/knit/{dataset}_trunc_{truncation}_kX_{kernel_X}_kY_{kernel_Y}_qX_{q_X}_qY_{q_Y}_proptrain_{proportion_train}.csv", method=method_list, dataset=dataset_list, truncation = config["truncation"], kernel_X = config["kernel_X"], kernel_Y = config["kernel_Y"], q_X = config["q_X"], q_Y = config["q_Y"], proportion_train = config["proportion_train"])
+        expand("results/02b_snakemake_simulate_data_comparing_parameters/output/normhsic/{dataset}_trunc_{truncation}_kX_{kernel_X}_kY_{kernel_Y}_qX_{q_X}_qY_{q_Y}_proptrain_{proportion_train}.csv", method=method_list, dataset=dataset_list, truncation = config["truncation"], kernel_X = config["kernel_X"], kernel_Y = config["kernel_Y"], q_X = config["q_X"], q_Y = config["q_Y"], proportion_train = config["proportion_train"])
 
 # uv run snakemake --snakefile snakemake_simulate_data_comparing_parameters/Snakefile --keep-going --nolock --use-conda --cores all --rerun-triggers mtime --conda-base-path $HOME/miniforge3

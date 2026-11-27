@@ -34,8 +34,7 @@ def main():
     gene_list = adata.var['gene'].values
     values_df = []
     ## Run test on each gene
-    # for i in range(Y_all_genes.shape[1]):
-    for i in range(5):
+    for i in range(Y_all_genes.shape[1]):
         try_count = 0
         test_stat = 0
         while (try_count < 5)&(test_stat == 0):
